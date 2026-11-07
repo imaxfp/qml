@@ -1,0 +1,414 @@
+Complex Numbers — recommended topics
+Topic	What to understand
+Real part	\(a\) in \(z=a+bi\)
+Imaginary part	\(b\) in \(z=a+bi\)
+Complex conjugate	\(z^*=a-bi\)
+Magnitude (modulus)	\(|z|=\sqrt{a^2+b^2}\)
+Phase (argument)	The angle of the complex number
+Complex addition	Adding real and imaginary parts
+Complex multiplication	How multiplication affects magnitude and phase
+Polar form	\(z=r(\cos\theta+i\sin\theta)\)
+Euler's formula	\(e^{i\theta}=\cos\theta+i\sin\theta\)
+My recommended learning order:
+1. Real and imaginary parts
+2. Magnitude and phase
+3. Complex conjugate
+4. Polar form and Euler's formula
+5. Complex multiplication
+Why add conjugate and magnitude?
+
+They are especially important in quantum computing:
+- Magnitude squared (\(|z|^2\)) is used to calculate measurement probabilities.
+- Complex conjugate is used in inner products, which help calculate overlaps between quantum states.
+You don't need to study complex analysis. These fundamentals are enough to move toward qubits and quantum gates.
+
+
+
+===
+2. Complex Vectors
+Topic	What to understand
+Vectors basics	What a vector is and how to represent it
+Complex-valued vectors	Vectors whose components are complex numbers
+Vector addition	Adding vectors component by component
+Scalar multiplication	Multiplying a vector by a complex number
+Vector magnitude (norm)	Measuring the length of a complex vector
+Complex conjugate of a vector	Applying conjugation to each component
+Inner product (dot product)	Measuring the relationship/overlap between two vectors
+Normalization	Making a vector's norm equal to 1
+
+Why is this important for quantum computing?
+
+A pure qubit state is represented by a normalized complex vector:
+\[
+|\psi\rangle =
+\begin{bmatrix}
+\alpha\\
+\beta
+\end{bmatrix}
+\]
+
+where \(\alpha,\beta\) are complex numbers.
+
+For now, focus especially on complex-valued vectors, norm, conjugate, inner product, and normalization. These concepts will directly prepare you to understand qubit states.
+
+
+===
+# 1. Complex Vector Spaces
+
+## 1. Vector Space Fundamentals
+- What is a vector?
+- What is a vector space?
+- Real vector space vs. complex vector space
+- What is a field of scalars?
+- Examples of vectors in C² and Cⁿ
+
+## 2. Complex Vector Operations
+- Vector addition
+- Vector subtraction
+- Complex scalar multiplication
+- Zero vector
+- Additive inverse
+- Equality of complex vectors
+
+## 3. Linear Combinations
+- What is a linear combination?
+- Linear combinations with complex coefficients
+- Geometric interpretation (where applicable)
+
+## 4. Basis and Dimension
+- What is a basis?
+- Standard basis vectors
+- What is dimension?
+- Coordinates in a complex vector space
+- Basis representation
+
+## 5. Linear Independence and Span
+- Linear independence
+- Linear dependence
+- Span of vectors
+- Generating sets
+- Determining whether vectors form a basis
+
+## 6. Quantum Computing Connection
+- Understanding C² and Cⁿ
+- Computational basis vectors: |0⟩ and |1⟩
+- Qubit state as a linear combination of basis vectors
+- Multi-qubit state-space dimensions: C⁴, C⁸, C¹⁶, etc.
+
+## 7. Practical Exercises (NumPy)
+- Create complex-valued vectors
+- Perform vector addition and subtraction
+- Perform complex scalar multiplication
+- Calculate linear combinations
+- Check linear independence
+- Explore basis and dimension
+
+===
+# 2. Inner Product Spaces
+
+## 1. Inner Product Fundamentals
+- What is an inner product?
+- Inner product vs. ordinary dot product
+- Properties of an inner product
+- Inner product of complex vectors
+- Complex conjugation in inner products
+
+## 2. Vector Norm
+- What is a vector norm?
+- Calculating the norm of a complex vector
+- Norm properties
+- Relationship between inner product and norm
+
+## 3. Orthogonality
+- What does orthogonality mean?
+- Orthogonal vectors
+- Orthogonal complements (conceptual introduction)
+- Geometric interpretation of orthogonality
+
+## 4. Orthonormality
+- What is an orthonormal set?
+- Orthonormal basis
+- Standard orthonormal basis
+- Projection onto a vector
+- Expansion in an orthonormal basis
+
+## 5. Normalization
+- What is vector normalization?
+- Normalizing complex vectors
+- Unit vectors
+- Verifying normalization
+
+## 6. Quantum Computing Connection
+- Inner product between quantum states
+- Probability amplitudes and state overlap
+- Orthogonal quantum states
+- Normalized qubit states
+- Calculating measurement probabilities using amplitudes
+- Born rule (introduction)
+
+## 7. Practical Exercises (NumPy)
+- Calculate complex inner products
+- Calculate vector norms
+- Check orthogonality
+- Verify orthonormal bases
+- Normalize complex vectors
+- Calculate state overlap
+
+===
+# 3. Hilbert Spaces
+
+## 1. Hilbert Space Fundamentals
+- What is a Hilbert space?
+- Relationship between vector spaces, inner product spaces, and Hilbert spaces
+- Finite-dimensional vs. infinite-dimensional Hilbert spaces
+- Examples of Hilbert spaces
+
+## 2. Completeness
+- What does completeness mean?
+- Cauchy sequences (conceptual introduction)
+- Convergent sequences
+- Complete vs. incomplete inner product spaces
+- Why completeness matters
+
+## 3. Hilbert Space Structure
+- Complex Hilbert spaces
+- Finite-dimensional complex Hilbert spaces
+- Infinite-dimensional Hilbert spaces (overview)
+- Subspaces of Hilbert spaces
+- Orthonormal bases in Hilbert spaces
+
+## 4. Quantum Computing Connection
+- Quantum states as vectors in Hilbert spaces
+- Single-qubit Hilbert space: C²
+- Two-qubit Hilbert space: C² ⊗ C² = C⁴
+- Multi-qubit Hilbert spaces
+- State normalization
+- Superposition as a linear combination of basis states
+- Physical states and global phase (introduction)
+
+## 5. Practical Exercises (NumPy)
+- Represent single-qubit states in C²
+- Represent two-qubit states in C⁴
+- Construct multi-qubit state vectors
+- Verify state normalization
+- Explore basis states and superposition
+- Compare state-space dimensions as qubit count increases
+
+## 6. Conceptual Review
+- Difference between vector space and inner product space
+- Difference between inner product space and Hilbert space
+- Why quantum mechanics uses Hilbert spaces
+- Why qubit states are represented in complex Hilbert spaces
+
+===
+5. Matrices and Linear Algebra
+# 5. Matrices and Linear Algebra
+
+## 1. Matrix Fundamentals
+- What is a matrix?
+- Real matrices vs. complex matrices
+- Matrix dimensions (rows and columns)
+- Matrix elements and indexing
+- Square matrices
+
+## 2. Complex Matrix Operations
+- Matrix addition and subtraction
+- Scalar multiplication (complex scalars)
+- Matrix multiplication
+- Matrix-vector multiplication
+- Identity matrix
+- Inverse matrix
+
+## 3. Complex Matrix Properties
+- Matrix transpose
+- Complex conjugate
+- Conjugate transpose (Hermitian adjoint)
+- Hermitian matrices
+- Unitary matrices
+
+## 4. Linear Transformations and Operators
+- What is a linear transformation?
+- Matrices as linear transformations
+- Linear operators on complex vector spaces
+- Applying matrices to quantum state vectors
+
+## 5. Eigenvalues and Eigenvectors
+- What are eigenvalues?
+- What are eigenvectors?
+- Eigenvalue equation
+- Eigenvalues of Hermitian matrices
+- Eigenvalues of unitary matrices
+
+## 6. Quantum Computing Connection
+- Quantum gates as complex matrices
+- Quantum gates as unitary transformations
+- Hadamard gate matrix
+- Pauli-X, Y, Z matrices
+- Applying gates to qubit state vectors
+- State normalization after gate application
+
+===
+
+
+Qubit Fundamentals
+1. Classical bit vs. qubit
+2. Computational basis states: \(|0\rangle\), \(|1\rangle\)
+3. Qubit state vector
+4. Superposition
+5. Probability amplitudes
+6. Measurement and Born rule
+7. Global phase vs. relative phase
+8. Bloch sphere representation
+2. Understanding a single qubit
+Core concepts
+These concepts explain what a qubit actually is.
+Concept	What you need to understand
+Qubit state	Why a qubit is a normalized complex vector
+Basis states	\(|0\rangle\) and \(|1\rangle\)
+Superposition	How a qubit can combine both basis states
+Probability amplitudes	How complex numbers determine measurement probabilities
+Measurement	Why measuring produces 0 or 1
+Quantum phase	Why complex phase matters
+Bloch sphere	Geometric visualization of a single qubit
+
+
+
+2. Quantum Gates
+Then learn:
+- Pauli-X, Y, Z
+- Hadamard (H)
+- Phase gates (S, T)
+- Rotation gates (Rx, Ry, Rz)
+- CNOT
+3. Quantum gates and transformations
+How qubits work
+Concept	What you need to understand
+Quantum gates	How matrices transform qubit states
+Pauli-X, Y, Z	Fundamental single-qubit gates
+Hadamard gate	How to create superposition
+Phase gates	How to change quantum phase
+Rotation gates	How to rotate a qubit state
+Unitary matrices	Why quantum gates must preserve normalization
+
+===
+4 Quantum Circuits
+
+## 1. Quantum Circuit Fundamentals
+- What is a quantum circuit?
+- Quantum circuit vs. classical circuit
+- Circuit diagrams and notation
+- Qubits and classical bits
+- Quantum registers and classical registers
+- Quantum circuit execution flow
+
+## 2. Circuit Construction
+- Initializing qubits
+- Applying quantum gates
+- Gate sequence and operation order
+- Single-qubit gates
+- Multi-qubit gates
+- Circuit composition
+- Circuit depth and width
+
+## 3. Quantum Measurement
+- Measurement operations
+- Measuring a single qubit
+- Measuring multiple qubits
+- Measurement in the computational basis
+- Measurement and classical bits
+- Partial measurement
+- Measurement collapse
+
+## 4. Quantum Circuit Execution
+- Statevector simulation
+- Shot-based execution
+- Repeated circuit execution
+- Measurement counts and bitstrings
+- Statevector vs. measurement results
+- Quantum circuit simulators vs. real quantum hardware
+
+## 5. Multi-Qubit Circuits
+- Multi-qubit registers
+- CNOT gate
+- Controlled gates
+- Entanglement in circuits
+- Bell-state preparation
+- Bell-state measurement
+- Quantum circuit tensor products
+
+## 6. Circuit Optimization
+- Gate decomposition
+- Gate cancellation
+- Circuit simplification
+- Circuit depth optimization
+- Gate count
+- Transpilation
+- Hardware constraints and connectivity
+
+## 7. Practical Quantum Programming
+- Build circuits using Qiskit
+- Visualize circuit diagrams
+- Execute circuits on a simulator
+- Inspect measurement results
+- Retrieve and analyze statevectors
+- Run circuits on real quantum hardware
+
+
+===
+5. Multiple qubits
+Concept	What you need to understand
+Tensor products	How individual qubits form a multi-qubit state
+Entanglement	Why qubits can become correlated
+CNOT gate	How two-qubit gates work
+Bell states	How to create entangled states
+State vector size	Why \(n\) qubits require \(2^n\) amplitudes
+
+6. Quantum computing algorithms
+Only after understanding the previous concepts:
+- Quantum teleportation
+- Deutsch-Jozsa algorithm
+- Grover's algorithm
+- Quantum Fourier Transform
+- Shor's algorithm
+6. Transition to QML
+This is where you connect quantum computing with your existing ML knowledge.
+Concept	Connection to ML
+Parameterized quantum circuits	Similar to trainable neural networks
+Quantum feature maps	Feature engineering / embeddings
+Quantum kernels	Kernel methods
+Variational quantum circuits	Trainable models
+Quantum circuit optimization	Gradient-based optimization
+Measurement and expectation values	Model outputs and loss functions
+
+
+Recommended learning roadmap
+1. Complex numbers and linear algebra
+   
+   Understand the mathematical language.
+2. Single qubit
+   
+   Understand superposition, probability, phase and measurement.
+3. Quantum gates
+   
+   Understand how quantum states change.
+4. Multiple qubits
+   
+   Understand tensor products and entanglement.
+5. Quantum circuits
+   
+   Combine gates into algorithms.
+6. QML
+   
+   Build parameterized circuits, quantum kernels and hybrid models.
+
+My recommendation: Don't rush into quantum algorithms yet.
+
+First, understand these five concepts particularly well:
+1. Complex amplitudes.
+2. Superposition.
+3. Quantum phase.
+4. Measurement and probability.
+5. Quantum gates (matrix × vector).
+Once these click, the rest of quantum computing becomes much easier to understand.
+
+We can study each concept with mathematical examples and Python simulations, building from a single qubit toward QML.
